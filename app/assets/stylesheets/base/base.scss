@@ -1,0 +1,21 @@
+@import "compass/css3/box-sizing";
+@import "font-awesome";
+@import "bootstrap";
+@import "bootstrap/theme";
+
+* {
+  @include box-sizing(border-box);
+}
+
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: "Open Sans", sans-serif;
+  text-rendering: optimizeLegibility;
+  font-weight: 300;
+  // Allow us to slide elements off screen.
+}
+
+@import "toastr";
+@import "variables";
+

@@ -1,0 +1,12 @@
+<div id="app-viewport"></div>
+<%= javascript_tag do %>
+
+  var options = {
+    el: "#app-viewport"
+  }
+
+  $(function(){
+    Admin.start(options);
+  });
+<% end %>
+

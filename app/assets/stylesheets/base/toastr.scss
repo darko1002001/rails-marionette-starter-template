@@ -1,0 +1,55 @@
+@import "compass/css3/box-shadow";
+@import "compass/css3/border-radius";
+
+#toast-container {
+  .toast {
+    border: 0;
+    position: relative;
+    margin: 0;
+    &:last-child{
+      margin: 0 0 100px;
+    }
+    background-image: none !important;
+    @include border-radius(0);
+    @include box-shadow( 0px 0px 18px 5px rgba(0, 0, 0, .1) );
+    .toast-message:before {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      font-size: 25px;
+      font-family: "FontAwesome";
+    }
+  }
+
+  .toast-success {
+    background-color: #55bc75;
+    .toast-message:before {
+      content: "\f00c";
+    }
+  }
+  .toast-error {
+    background-color: #e86c46;
+    .toast-message:before {
+      left: 12px;
+      content: "\f00d";
+    }
+  }
+  .toast-warning {
+    background-color: #f9a937;
+    .toast-message:before {
+      left: 19px;
+      content: "!";
+    }
+  }
+  .toast-info {
+    background-color: #48a8d9;
+    .toast-message:before {
+      left: 20px;
+      content: 'i';
+    }
+  }
+  .toast-message {
+    font-size: 13px;
+    font-weight: 300;
+  }
+}
